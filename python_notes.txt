@@ -1,0 +1,234 @@
+CONTENTS:
+
+1)  COMMENTS
+
+2)  IF LOOPS
+
+3)  ELSE
+
+4)  FOR LOOPS
+
+5)  WHILE
+
+6)  BREAKS
+
+7)  CONTINUE
+
+8)  RANGE
+
+9)  FUNCTION
+
+10) RETURN VALUE
+
+11) VARIABLE SCOPE
+
+12) KEYWORD ARGUMENTS
+
+13) FLEXIABLE NUMBER OF ARGUMENTS
+
+14) UNPACKING ARGUMENTS
+
+15) SETS
+
+16) DICTIONARY
+
+
+
+	foods = ['bacon', 'tuna', 'ham', 'snausages', 'beef']
+
+	buttcrack += 1  *Same as buttcrack = buttcrack + 1
+
+
+
+1)  COMMENTS
+
+	# is for a single line
+
+
+	'''
+	is for several lines
+	'''
+
+
+2)  IF LOOPS
+
+	if VAR is "Bucky":
+
+	elif VAR is "Lucy":
+
+	else:
+
+
+3)  ELSE
+
+	else
+
+	for - executed when the loop terminates through exhaustion of the list
+	while - when the condition becomes false
+   
+
+4)  FOR LOOPS
+
+	for i in VAR:
+	  STUFF
+
+	for i in VAR[1:4]:
+	  STUFF
+
+
+5)  WHILE
+
+	while VAR < NUMBER:
+	    STUFF
+
+
+6)  BREAKS
+
+	break
+	
+	breaks out of the innermost enclosing for or while loop
+
+
+7)  CONTINUE
+
+	continue
+
+	continues with the next iteration of the loop
+
+
+8)  RANGE
+
+	range(start, stop, step)
+
+	start: Starting number of the sequence.
+	stop: Generate numbers up to, but not including this number.
+	step: Difference between each number in the sequence.
+
+
+9) FUNCTION
+
+	def declares the function
+
+	def funcNAME(argument1, argument2, ...):
+		stuff for the function
+		stuff for the function
+
+
+
+10) RETURN VALUE
+
+
+	def funcNAME(x):
+		VARIABLE = x+1
+		return VARIABLE
+
+	Holder = funcNAME(5)
+
+	  *Holder now = 6
+
+	print(Holder)
+
+	  *this would print a value of 6
+
+
+11) VARIABLE SCOPE
+
+	GlobalVariable all functions can use them
+
+	def corn():
+	    LocalVariable1
+	    * only this function can use LocalVariable1
+
+	def fudge():
+	    LocalVariable2
+	    * this function cannot use LocalVariable1
+	    * this function can us LocalVariable2
+
+
+12) KEYWORD ARGUMENTS
+
+
+	def func(Bucky, action='ate', item='tuna'):
+
+	
+	* All agruments with = is optional and will default 
+	   to what is set on the right of =
+	* to pass in a different number of arguments, 
+	   or in a different order
+	func(item='Milk', action='Drank', Bucky='Jason')
+
+
+13) FLEXIABLE NUMBER OF ARGUMENTS
+
+	* The * before an argument will
+	    accept a list of variables
+
+	def func(*arrrg)
+
+
+14) UNPACKING ARGUMENTS
+
+	*putting an array into a Flexiable Argument
+
+	bucks_data = [27, 20, Jason]
+	def func(arg1, arg2, arg3):
+		stuff for the function		
+
+	Unpacking Argument List:
+	func(*bucks_data)
+
+
+15) SETS
+
+	setNAME = {'item_1', 'item_2', ... , 'item_n',}
+
+	* set contains an unordered collection of 
+            unique and immutable objects
+
+
+16) DICTIONARY
+
+
+classmates = {'Tony':'cool but smells', 'Emma':'She sits behind me', 'Lucy':'I like her because she ask lots of questions'}
+
+#print(classmates)
+#S(1)
+#print(classmates['Emma'])
+#S(2)
+
+# for whenever we loop though, treat k as the keyword and v as the value
+# classmates is the dictionary we are looping through, and it's going to loop through all of the items
+
+#for k, v in classmates.items():
+#    print(k + v)
+
+
+17) MODULES
+
+	lets is load another file's functions
+		import MODULE
+		from MODULE import *
+
+		* the module can be file you made
+		*  or built into python
+		*  or downloaded off the web
+
+
+	* many other file's function's could have the same name
+	* therefor you mus specify the file you want to use the function from
+	* use this format >>>  filename.function()
+
+	*filename.function()
+
+
+
+18  Reading and Writing to Files ##########
+
+# open( ) get the file ready
+# the first argument is what you would like the file's name to be
+# the second argument is writing 'w' or reading 'r'
+
+#fw = open('sample', 'w')
+#fw.write('Writing some stuff in my text file\n')
+#fw.write('I like bacon\n')
+#fw.close()
