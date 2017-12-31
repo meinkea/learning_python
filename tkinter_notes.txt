@@ -1,0 +1,146 @@
+#################################################################################
+#										#
+#  INFORMATION:									#
+#    tkinter is a standard built in library with within python to make GUI's.  	#
+#										#
+#  Versions to note:								#
+#	tkinter is Python3							#
+#	Tkinter is Python2							#
+#										#
+#################################################################################
+
+ --- BASIC TEMPLATE ---
+
+from tkinter import *
+windowNAME = Tk()
+
+# Widgets & Frames
+
+windowNAME.mainloop()
+
+ ----------------------
+
+  Notes about the Template:
+
+  Tk() is a tkinter class
+	~It is a constructor class that creates a blank window
+
+  root.mainloop()
+	~mainloop() displays, or prints, the window continously
+
+
+
+
+ ---------- Objects & Widgets ----------
+
+    NOTE: programming objects, like buttons and sliders, 
+	  are called widgets in tkinter.
+
+
+Label() ~ text in tkinter is called a 'Label'
+
+	labelNAME = Label(windowNAME, text="This is too easy")
+
+	#	Parameters:
+		 1) Which window
+		 2) What text you want
+		Optional:
+		 4) What color for the Label
+			*bg stands for background 
+		 3) What color for the text
+			*fg stands for forground
+
+
+Frame() ~ invisiable rectangles that can be a basic layout to put things in
+
+	frameNAME = Frame(windowNAME)
+
+	#	Parameters:
+		 1) Which window
+
+
+Button() ~ don't press the red button
+
+	buttonNAME = Button(frameNAME, text="Button 1", bg="red", fg="white")
+
+	#	Parameters:
+		 1) Which frame
+		 2) What text you want on the button
+		Optional:
+		 4) What color for the button
+			*bg stands for background 
+		 3) What color for the text
+			*fg stands for forground
+
+
+Entry()
+
+	entryNAME = Entry(windowNAME)
+
+	#	Parameters:
+		 1) Which window
+
+
+Checkbutton()
+
+	checkbuttonNAME = checkbutton(windowNAME, text="Keep me logged in")
+
+	#	Parameters:
+		 1) Which window
+		 2) What text you want next to checkbutton
+
+
+ ------- Placing Widgets -------
+   --- On Frames & Windows ---
+
+  NOTE: pack and grid cannot be use together on same window or frame
+
+.pack() ~ puts/packs the widget in the window ac
+
+	*Default places the widget in first place avaliable
+	labelNAME.pack(side=BOTTOM, fill=X)
+
+	#	Parameters:
+		Optional:
+		 1) Where to place place		
+			side =
+			     1) TOP (default)
+			     2) BOTTOM
+			     3) LEFT
+			     4) RIGHT
+		 2) Grows/Fits/Streches the widget proportional to parent window
+			fill=
+		  	  1) X
+			  2) Y
+			  3) BOTH (this one is kind of useless...)
+
+
+.grid() ~ THE FAR SUPERIOR OPTION
+
+	*Defaults to first availiable row or column
+
+	labelNAME.grid(row=0, column=0, sticky=N, padx=5, pady=5)
+
+	#	Parameters:
+		Optional:
+		 1) columnspan = 0,1, ... , n
+		 2) rowspan = 0,1, ... , n
+		 3) row = 0,1, ... , n
+		 4) column = 0,1, ... , n
+		 5) Alignment in cell
+			N - North
+			S - South
+			E - East
+			W - West
+		 4) padx = 0,1, ... , n  *padding around widget
+		 5) pady = 0,1, ... , n  *padding around widget
+		 6) ipadx = 0,1, ... , n  *padding inside widget
+		 7) ipady = 0,1, ... , n  *padding inside widget
+		 8) in = (NO IDEA MAN!!! Place widget in widget)
+
+
+
+#
+
+
+END OF THE LINE
